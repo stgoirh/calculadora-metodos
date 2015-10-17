@@ -22,27 +22,27 @@ public class CalculadoraConMetodos {
     public static void Menu(int opc, int n1, int n2) {
         switch (opc) {
             case 1:
-                System.out.println(Sumar(n1, n2));
+                System.out.println("el resultado es:"+Sumar(n1, n2));
                 break;
             case 2:
-                System.out.println(Restar(n1, n2));
+                System.out.println("el resultado es:"+Restar(n1, n2));
                 break;
             case 3:
-                System.out.println(Multiplicar(n1, n2));
+                System.out.println("el resultado es:"+Multiplicar(n1, n2));
                 break;
             case 4:
                 try
                 {
-                System.out.println(Dividir(n1, n2));
+                System.out.println("el resultado es:"+Dividir(n1, n2));
                 }catch(ArithmeticException e){
                     System.out.println("Error matematico");
                 }
                 break;
             case 5:
-                System.out.println(Ordenar(n1, n2));
+                System.out.println("el resultado es:"+Mayor(n1, n2));
                 break;
             case 6:
-                System.out.println(Elevar(n1, n2));
+                System.out.println("el resultado es:"+Elevar(n1, n2));
                 break;
             case 7:
                 System.out.println("ingrese 1 para salir y cualquier numero para salir");
@@ -69,12 +69,14 @@ public class CalculadoraConMetodos {
         return(numero1/numero2);
     }
 
-    public static int Ordenar(int numero1, int numero2) {
+    public static int Mayor(int numero1, int numero2) {
         int rOrd;
         if (numero1 > numero2) {
             rOrd = numero1;
-        } else {
+        } else if(numero2 > numero1){
             rOrd = numero2;
+        }else{
+            rOrd=numero1;
         }
         return rOrd;
     }
